@@ -3,30 +3,6 @@
 Content-based book recommendations with real covers from Open Library.
 
 
-## Layout
-
-    backend/
-      app/
-        main.py                  FastAPI app: CORS, routers, table creation
-        config.py                settings (DATABASE_URL, CORS) via env/.env
-        database.py              engine + session
-        models.py                Book, ShelfEntry, Dismissal, Preference
-        schemas.py               Pydantic request/response shapes
-        seed.py                  one-shot catalog import from Open Library
-        routers/
-          books.py               list/search/detail + POST /books/import
-          shelf.py               shelf CRUD, dismissals, genre preferences
-          recommendations.py     GET /recommendations → rows with reasons
-        services/
-          openlibrary.py         external API client (all HTTP lives here)
-          recommender.py         pure scoring engine (unit-testable)
-    frontend/
-      src/
-        api.js                   all fetch calls (components never fetch)
-        theme.js                 design tokens
-        components/              Cover (real image + fallback), BookCard, BookModal, StarRating
-        views/                   Onboarding, Discover, Shelf, SearchResults
-        App.jsx                  state + routing between views
 
 ## Run it
 
