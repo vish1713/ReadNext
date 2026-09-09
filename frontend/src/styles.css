@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #F0E6FA;
+  color: #191A1E;
+  font-family: 'Public Sans', system-ui, sans-serif;
+}
+button { font-family: inherit; }
+button:focus-visible { outline: 2px solid #1E5B43; outline-offset: 2px; }
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(25,26,30,0.2); }
+.rule {
+  border-top: 1px solid #191A1E;
+  border-bottom: 1px solid rgba(25,26,30,0.13);
+  height: 3px;
+  margin: 26px 0 18px;
+}
+.row-scroll { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 8px; }
+h2.shelf-title { font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; margin: 0 0 14px; font-weight: 400; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
